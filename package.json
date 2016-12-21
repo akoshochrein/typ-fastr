@@ -6,6 +6,8 @@
     "start": "electron ."
   },
   "dependencies": {
+    "babel-preset-es2016-node5": "^1.1.2",
+    "babel-preset-react": "^6.16.0",
     "electron-prebuilt-compile": "^1.4.12",
     "react": "^15.4.1",
     "react-dom": "^15.4.1"
