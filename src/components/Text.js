@@ -7,7 +7,7 @@ export class Text extends React.Component {
             <div>
                 {
                     this.props.value
-                        ? this.props.value.split("").map((c, i) => <Letter key={i} value={c}/>)
+                        ? this.props.value.split("").map((c, i) => <Letter key={i} value={c} index={i}/>)
                         : null
                 }
             </div>

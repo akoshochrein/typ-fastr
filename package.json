@@ -16,6 +16,7 @@
     "babel-preset-react": "^6.16.0",
     "babel-preset-stage-0": "^6.16.0",
     "electron-prebuilt-compile": "^1.4.12",
+    "extend": "^3.0.0",
     "react": "^15.4.1",
     "react-dom": "^15.4.1",
     "webpack": "^1.14.0",
