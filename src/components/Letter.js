@@ -22,9 +22,9 @@ const hitLetterStyle = extend({}, letterBaseStyle, {
 export class Letter extends React.Component {
     render () {
         let currentStyle =
-            this.props.index % 2
-                ? letterBaseStyle
-                : hitLetterStyle;
+            this.props.isCurrent
+                ? currentLetterStyle
+                : letterBaseStyle;
         return (
             <span style={currentStyle}>{this.props.value}</span>
         );
