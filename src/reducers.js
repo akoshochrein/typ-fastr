@@ -2,7 +2,8 @@ import { combineReducers } from 'redux';
 import { INCREMENT_CURSOR } from './actions';
 
 const initialState = {
-    cursorPosition: 0
+    cursorPosition: 0,
+    text: "almafa supdawg".split("")
 };
 
 export function typFastrApp(state = initialState, action) {
