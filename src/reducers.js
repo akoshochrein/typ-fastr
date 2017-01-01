@@ -11,18 +11,17 @@ const initialState = {
 export function typFastrApp(state = initialState, action) {
     switch (action.type) {
         case INCREMENT_CURSOR:
-            let newCursorPosition = state.cursorPosition + 1;
             let newText = state.text.slice();
 
             // deinit prev letter
-            newText[newCursorPosition].state = 1;
-            newText[newCursorPosition].isCurrent = false;
+            newText[state.cursorPosition].state = 1;
+            newText[state.cursorPosition].isCurrent = false;
 
             // init current letter
-            newText[newCursorPosition + 1].isCurrent = true;
+            newText[state.cursorPosition + 1].isCurrent = true;
 
             return Object.assign({}, state, {
-                cursorPosition: newCursorPosition,
+                cursorPosition: state.cursorPosition + 1,
                 text: newText
             });
         default:
