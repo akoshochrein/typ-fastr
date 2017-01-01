@@ -21,10 +21,9 @@ const hitLetterStyle = extend({}, letterBaseStyle, {
 
 export class Letter extends React.Component {
     render () {
-        let currentStyle =
-            this.props.isCurrent
-                ? currentLetterStyle
-                : letterBaseStyle;
+        let currentStyle = letterBaseStyle;
+        if (1 === this.props.state) currentStyle = hitLetterStyle;
+        if (this.props.isCurrent) currentStyle = currentLetterStyle;
         return (
             <span style={currentStyle}>{this.props.value}</span>
         );

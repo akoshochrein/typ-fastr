@@ -9,8 +9,13 @@ export class TextComponent extends React.Component {
             <div tabIndex="0" onKeyDown={this.props.incrementCursor}>
                 {
                     this.props.text
-                        ? this.props.text.map((c, i) =>
-                            <Letter key={i} value={c} index={i} isCurrent={i === this.props.cursorPosition} />)
+                        ? this.props.text.map((letter) =>
+                            <Letter
+                                key={letter.index}
+                                value={letter.charVal}
+                                index={letter.index}
+                                isCurrent={letter.index === this.props.cursorPosition}
+                                state={letter.state} />)
                         : null
                 }
             </div>
