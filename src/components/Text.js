@@ -33,7 +33,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
     return {
         incrementCursor: (e) => {
-            dispatch(incrementCursor(e.key))
+            dispatch(incrementCursor(e.key, e.shiftKey, e.controlKey, e.altKey, e.metaKey))
         }
     };
 };
