@@ -14,8 +14,12 @@ export function typFastrApp(state = initialState, action) {
             let newText = state.text.slice();
 
             // deinit prev letter
-            newText[state.cursorPosition].state = 1;
-            newText[state.cursorPosition].isCurrent = false;
+            let currentLetter = newText[state.cursorPosition];
+            currentLetter.isCurrent = false;
+            currentLetter.state =
+                action.payload.key === currentLetter.charVal
+                ? 1
+                : 2;
 
             // init current letter
             newText[state.cursorPosition + 1].isCurrent = true;

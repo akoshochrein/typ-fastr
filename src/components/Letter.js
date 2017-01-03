@@ -23,6 +23,7 @@ export class Letter extends React.Component {
     render () {
         let currentStyle = letterBaseStyle;
         if (1 === this.props.state) currentStyle = hitLetterStyle;
+        if (2 === this.props.state) currentStyle = missedLetterStyle;
         if (this.props.isCurrent) currentStyle = currentLetterStyle;
         return (
             <span style={currentStyle}>{this.props.value}</span>
